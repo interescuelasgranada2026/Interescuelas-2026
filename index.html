@@ -85,20 +85,23 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         .colab-logo {
-            width: 100%;
-            height: 60px;
+            max-width: 90%;
+            max-height: 80%;
             object-fit: contain;
-            filter: grayscale(20%);
-            transition: filter 0.3s ease;
+            filter: grayscale(10%);
+            transition: all 0.3s ease;
         }
         .colab-logo:hover {
             filter: grayscale(0%);
+            transform: scale(1.05);
         }
         .card-icon-img {
-            height: 30px;
+            height: 40px;
             width: auto;
+            max-width: 120px;
             object-fit: contain;
             margin-bottom: 8px;
+            display: block;
         }
     </style>
 </head>
@@ -196,7 +199,7 @@
             <div class="card">
                 <img src="https://i.postimg.cc/L55rDXDG/29046-logo-Libere-Hospitality.jpg" class="card-icon-img" alt="Libere">
                 <div class="flex justify-between items-center mb-2">
-                    <h3 class="font-bold text-sm">Libere Granada Catedral</h3>
+                    <h3 class="font-bold text-sm">Líbere Granada Catedral</h3>
                     <span class="discount-badge">15%</span>
                 </div>
                 <p class="text-xs text-gray-500 mb-3 font-mono">Cód: LIBEREEIP2026</p>
@@ -223,7 +226,7 @@
                 <p class="text-xs text-gray-600 mt-2">Sobre carta. No válido de viernes noche a domingo.</p>
             </div>
             <div class="card">
-                <img src="https://i.postimg.cc/yYkT19WQ/1000002616-600x600.jpg" class="card-icon-img" alt="Bar Pakillo" style="border-radius: 50%;">
+                <img src="https://i.postimg.cc/yYkT19WQ/1000002616-600x600.jpg" class="card-icon-img" alt="Bar Pakillo" style="border-radius: 8px;">
                 <h3 class="font-bold text-sm uppercase">Bar Pakillo</h3>
                 <p class="text-xs text-gray-600 mt-1 italic">Lo mejor en tapas tradicionales.</p>
             </div>
@@ -253,23 +256,25 @@
             </div>
             <div class="card">
                 <img src="https://i.postimg.cc/x1fF3qdJ/Andalucia-A-PIE-Granada-01-300x288.png" class="card-icon-img" alt="Andalucia a Pie">
-                <h4 class="font-bold text-sm">Andalucía a Pie (20% DTO)</h4>
-                <p class="text-xs font-mono mb-2 text-gray-500 uppercase">Cód: INTERESCUELAS20</p>
+                <h4 class="font-bold text-sm">Andalucía a Pie</h4>
+                <span class="discount-badge text-[10px]">20% DTO</span>
+                <p class="text-xs font-mono mb-2 text-gray-500 uppercase mt-2">Cód: INTERESCUELAS20</p>
                 <a href="https://andaluciapie.es/" target="_blank" class="text-xs text-red-800 underline">Web Oficial</a>
             </div>
             <div class="card">
                 <img src="https://i.postimg.cc/wTHW93DH/Logo.png" class="card-icon-img" alt="Lolitas Tour">
-                <h4 class="font-bold text-sm">Lolita's Tour (15% DTO)</h4>
-                <p class="text-xs font-mono mb-2 text-gray-500 uppercase">Cód: INTERESCUELAS15</p>
+                <h4 class="font-bold text-sm">Lolita's Tour</h4>
+                <span class="discount-badge text-[10px]">15% DTO</span>
+                <p class="text-xs font-mono mb-2 text-gray-500 uppercase mt-2">Cód: INTERESCUELAS15</p>
                 <a href="https://www.lolitastours.com" target="_blank" class="text-xs text-red-800 underline">Web Oficial</a>
             </div>
-            <!-- SECCIÓN TABLAOS ACTUALIZADA CON LOGOS -->
+            
             <div class="card">
-                <h4 class="font-bold text-sm mb-4">Flamenco y Tablaos</h4>
+                <h4 class="font-bold text-sm mb-4">Flamenco y Espectáculos</h4>
                 <div class="space-y-6">
                     <div class="border-t pt-3">
                         <img src="https://i.postimg.cc/qvGqWD46/logo-tablao-alborea-2020.png" class="card-icon-img" alt="La Alborea">
-                        <p class="font-bold text-xs mt-1">La Alboreá</p>
+                        <p class="font-bold text-xs mt-1">Tablao La Alboreá</p>
                         <p class="text-[11px] text-gray-600">Precio especial: 14€</p>
                     </div>
                     <div class="border-t pt-3">
@@ -278,7 +283,15 @@
                         <span class="discount-badge text-[10px]">20% DTO</span>
                     </div>
                     <div class="border-t pt-3">
-                        <img src="https://i.postimg.cc/44zg87Jy/maxresdefault.jpg" class="card-icon-img" alt="La Solea">
+                        <img src="https://i.postimg.cc/RVHMxs1d/images-(1).png" class="card-icon-img" alt="Palacio Flamenco">
+                        <p class="font-bold text-xs mt-1">Palacio Flamenco</p>
+                    </div>
+                    <div class="border-t pt-3">
+                        <img src="https://i.postimg.cc/yxFscWN1/images-(2).png" class="card-icon-img" alt="Teatro Flamenco">
+                        <p class="font-bold text-xs mt-1">Teatro Flamenco</p>
+                    </div>
+                    <div class="border-t pt-3">
+                        <img src="https://i.postimg.cc/44zg87Jy/maxresdefault.jpg" class="card-icon-img" alt="La Solea" style="border-radius: 4px;">
                         <p class="font-bold text-xs mt-1">La Soleá</p>
                         <span class="discount-badge text-[10px]">20% DTO</span>
                     </div>
@@ -290,7 +303,7 @@
             </div>
         </section>
 
-        <!-- COLABORADORES -->
+        <!-- COLABORADORES (LISTA COMPLETA DE 21) -->
         <section id="colaboradores" class="content-section hidden">
             <h2 class="section-title">Instituciones y Colaboradores</h2>
             
@@ -310,31 +323,67 @@
             </div>
 
             <div>
-                <p class="text-xs font-bold text-gray-400 mb-4 uppercase tracking-wider">Empresas Colaboradoras</p>
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                <p class="text-xs font-bold text-gray-400 mb-4 uppercase tracking-wider">Red de Colaboradores (Empresas)</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <!-- Fila 1 -->
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
                         <img src="https://i.postimg.cc/JzzBqWCq/ALSA-2019-logo-svg.png" class="colab-logo" alt="Alsa">
                     </div>
-                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
                         <img src="https://i.postimg.cc/9F36ZWZ2/CODICE-LOGO-amarillo.png" class="colab-logo" alt="Cödice Experience">
                     </div>
-                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
-                        <img src="https://i.postimg.cc/gcMph94b/Logotipo-Group-01-2-1.png" class="colab-logo" alt="Luna de Granada">
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/gcMph94b/Logotipo-Group-01-2-1.png" class="colab-logo" alt="Gran Hotel Luna">
                     </div>
-                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
-                        <img src="https://i.postimg.cc/L55rDXDG/29046-logo-Libere-Hospitality.jpg" class="colab-logo" alt="Libere">
+                    <!-- Fila 2 -->
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/L55rDXDG/29046-logo-Libere-Hospitality.jpg" class="colab-logo" alt="Líbere Granada">
                     </div>
-                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/9FqkQsn9/Apartamentos-Campo-Del-Principe-Logo-color.png" class="colab-logo" alt="Campo del Príncipe">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/x1fF3qdJ/Andalucia-A-PIE-Granada-01-300x288.png" class="colab-logo" alt="Andalucía a Pie">
+                    </div>
+                    <!-- Fila 3 -->
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/wTHW93DH/Logo.png" class="colab-logo" alt="Lolita's Tour">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
                         <img src="https://i.postimg.cc/rpWWdNkM/logo-1.png" class="colab-logo" alt="Walk in Granada">
                     </div>
-                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
-                        <img src="https://i.postimg.cc/9FqkQsn9/Apartamentos-Campo-Del-Principe-Logo-color.png" class="colab-logo" alt="Campo del Principe">
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/pLjykV1r/images.jpg" class="colab-logo" alt="Jardines de Zoraya">
                     </div>
-                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                    <!-- Fila 4 -->
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
                         <img src="https://i.postimg.cc/RVHMxs1d/images-(1).png" class="colab-logo" alt="Palacio Flamenco">
                     </div>
-                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/qvGqWD46/logo-tablao-alborea-2020.png" class="colab-logo" alt="Tablao Alboreá">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
                         <img src="https://i.postimg.cc/yxFscWN1/images-(2).png" class="colab-logo" alt="Teatro Flamenco">
+                    </div>
+                    <!-- Fila 5 -->
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/44zg87Jy/maxresdefault.jpg" class="colab-logo" alt="La Soleá">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/bwr4jsjJ/images-(3).png" class="colab-logo" alt="Casa Ana">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/d1YWD0gR/logo-(1).png" class="colab-logo" alt="Mirador de Aixa">
+                    </div>
+                    <!-- Fila 6 -->
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/yYkT19WQ/1000002616-600x600.jpg" class="colab-logo" alt="Bar Pakillo">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/PJN1qsfN/sababera99.png" class="colab-logo" alt="Sabanera 99">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-24 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/L61ZQVJ1/images-(4).png" class="colab-logo" alt="Bar Toles Plaza">
                     </div>
                 </div>
             </div>
