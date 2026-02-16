@@ -79,11 +79,8 @@
             display: block;
             background-color: #e5e7eb;
             min-height: 150px;
-            object-fit: cover;
-        }
-        /* Estilo para cuando la imagen no carga */
-        img:not([src]), img[src=""] {
-            visibility: hidden;
+            object-fit: contain;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -96,9 +93,8 @@
             <p class="text-xl opacity-90 mt-2">Granada 2026</p>
             <div class="mt-4 flex justify-center">
                 <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center p-2 shadow-lg overflow-hidden">
-                   <!-- LOGO DEL EVENTO -->
-                   <!-- Sustituye el src por el "Enlace Directo" de Postimages -->
-                   <img id="logo-img" src="https://i.postimg.cc/NM785kw8/Logo-1.jpg" alt="Logo" class="w-full h-full object-contain" 
+                   <!-- LOGO DEL EVENTO ACTUALIZADO -->
+                   <img id="logo-img" src="https://i.postimg.cc/NM785kw8/Logo-1.jpg" alt="Logo Interescuelas" class="w-full h-full object-contain" 
                         onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-graduation-cap text-red-800 text-4xl\'></i>'">
                 </div>
             </div>
@@ -109,14 +105,14 @@
     <!-- MENÚ DE NAVEGACIÓN -->
     <nav class="flex overflow-x-auto p-4 space-x-2 sticky top-0 bg-white z-50 shadow-md no-scrollbar">
         <button onclick="showSection('inicio')" class="nav-pill active" id="btn-inicio">Inicio</button>
-        <button onclick="showSection('programa')" class="nav-pill" id="btn-programa">Programa</button>
-        <button onclick="showSection('transporte')" class="nav-pill" id="btn-transporte">Transporte</button>
-        <button onclick="showSection('alojamiento')" class="nav-pill" id="btn-alojamiento">Alojamiento</button>
-        <button onclick="showSection('comer')" class="nav-pill" id="btn-comer">Dónde Comer</button>
-        <button onclick="showSection('actividades')" class="nav-pill" id="btn-actividades">Actividades</button>
-        <button onclick="showSection('ver')" class="nav-pill" id="btn-ver">Qué Ver</button>
-        <button onclick="showSection('colaboradores')" class="nav-pill" id="btn-colaboradores">Colaboradores</button>
-        <button onclick="showSection('contacto')" class="nav-pill" id="btn-contacto">Contacto</button>
+        <button onclick="showSection('programa')" class="nav-pill" id="id-btn-programa">Programa</button>
+        <button onclick="showSection('transporte')" class="nav-pill" id="id-btn-transporte">Transporte</button>
+        <button onclick="showSection('alojamiento')" class="nav-pill" id="id-btn-alojamiento">Alojamiento</button>
+        <button onclick="showSection('comer')" class="nav-pill" id="id-btn-comer">Dónde Comer</button>
+        <button onclick="showSection('actividades')" class="nav-pill" id="id-btn-actividades">Actividades</button>
+        <button onclick="showSection('ver')" class="nav-pill" id="id-btn-ver">Qué Ver</button>
+        <button onclick="showSection('colaboradores')" class="nav-pill" id="id-btn-colaboradores">Colaboradores</button>
+        <button onclick="showSection('contacto')" class="nav-pill" id="id-btn-contacto">Contacto</button>
     </nav>
 
     <main class="max-w-md mx-auto p-4">
@@ -125,33 +121,30 @@
         <section id="inicio" class="content-section">
             <h2 class="section-title">Bienvenidos</h2>
             <div class="card border-none bg-red-800 text-white">
-                <p class="text-lg font-semibold">¡Hola protocolarios!</p>
+                <p class="text-lg font-semibold">¡Hola Granada!</p>
                 <p class="text-sm opacity-90 mt-2">Estamos encantados de recibiros en nuestra sede para este encuentro nacional de la EIP.</p>
             </div>
             <p class="text-gray-700 leading-relaxed px-2">
-                Esta guía interactiva contiene todos los descuentos que hemos gestionado para que vuestra estancia sea inolvidable además de una guía de recomendaciones de la ciudad. Navega por las pestañas para descubrir todo lo que Granada tiene preparado para vosotros.
+                Esta guía interactiva contiene todos los acuerdos y descuentos que hemos gestionado para que vuestra estancia sea inolvidable. Navega por las pestañas para descubrir todo lo que Granada tiene preparado para vosotros.
             </p>
         </section>
 
-        <!-- PROGRAMA -->
+        <!-- PROGRAMA ACTUALIZADO -->
         <section id="programa" class="content-section hidden text-center">
             <h2 class="section-title">Programa Oficial</h2>
             <p class="text-xs text-gray-500 mb-4 italic">Toca las imágenes para ver en detalle</p>
             <div class="space-y-6">
                 <div class="rounded-lg border shadow-sm bg-white p-2">
                     <p class="font-bold text-red-800 mb-2 uppercase text-xs">Jueves 16 Abril</p>
-                    <img src="https://i.postimg.cc/CMGrqb4r/JUEVES.jpg" alt="Programa Jueves" class="program-img" 
-                         onerror="this.src='https://via.placeholder.com/400x200?text=Imagen+No+Disponible'">
+                    <img src="https://i.postimg.cc/jCjhVwmy/fe7f7a28.jpg" alt="Programa Jueves" class="program-img" onerror="this.src='https://via.placeholder.com/400x200?text=Imagen+Jueves+No+Disponible'">
                 </div>
                 <div class="rounded-lg border shadow-sm bg-white p-2">
                     <p class="font-bold text-red-800 mb-2 uppercase text-xs">Viernes 17 Abril</p>
-                    <img src="https://i.postimg.cc/mD8cvXs8/VIERNES.jpg" alt="Programa Viernes" class="program-img" 
-                         onerror="this.src='https://via.placeholder.com/400x200?text=Imagen+No+Disponible'">
+                    <img src="https://i.postimg.cc/mD8cvXs8/VIERNES.jpg" alt="Programa Viernes" class="program-img" onerror="this.src='https://via.placeholder.com/400x200?text=Imagen+Viernes+No+Disponible'">
                 </div>
                 <div class="rounded-lg border shadow-sm bg-white p-2">
                     <p class="font-bold text-red-800 mb-2 uppercase text-xs">Sábado 18 Abril</p>
-                    <img src="https://i.postimg.cc/rsHDmDzN/SABADO.jpg" alt="Programa Sábado" class="program-img" 
-                         onerror="this.src='https://via.placeholder.com/400x200?text=Imagen+No+Disponible'">
+                    <img src="https://i.postimg.cc/rsHDmDzN/SABADO.jpg" alt="Programa Sábado" class="program-img" onerror="this.src='https://via.placeholder.com/400x200?text=Imagen+Sábado+No+Disponible'">
                 </div>
             </div>
         </section>
@@ -169,6 +162,9 @@
                     <p class="text-xs text-gray-500 uppercase font-bold mb-1">Código de descuento</p>
                     <p class="text-2xl font-mono font-bold text-red-800 tracking-widest">EI2026</p>
                 </div>
+                <ul class="mt-4 text-[11px] space-y-2 text-gray-600">
+                    <li><i class="fa-solid fa-calendar-check mr-2"></i><b>Fechas:</b> Del 14 al 21 de abril.</li>
+                </ul>
             </div>
         </section>
 
@@ -194,6 +190,14 @@
                 <p class="text-xs text-gray-500 mb-3 font-mono">Código: LIBEREEIP2026</p>
                 <a href="https://www.staylibere.com/es/apartamentos/libere-granada-catedral" target="_blank" class="contact-link text-sm"><i class="fa-solid fa-globe text-red-700"></i> Reservar</a>
             </div>
+            <div class="card">
+                <h3 class="font-bold text-sm mb-2">Apartamentos Campo del Príncipe</h3>
+                <div class="bg-yellow-50 p-3 rounded-lg border border-yellow-200 mb-3 text-[11px]">
+                    <p class="font-bold text-yellow-800 uppercase">Beneficio:</p>
+                    <p>Desayuno gratuito incluido (viernes y sábado mañana).</p>
+                </div>
+                <a href="mailto:reservas@apartamentoscampodelprincipe.es" class="contact-link text-sm"><i class="fa-solid fa-envelope text-red-700"></i> Email Reservas</a>
+            </div>
         </section>
 
         <!-- COMER -->
@@ -202,20 +206,30 @@
             <div class="card">
                 <h3 class="font-bold text-sm uppercase">Mirador de Aixa</h3>
                 <span class="discount-badge inline-block mt-1">5% DTO.</span>
-                <p class="text-xs text-gray-600 mt-2">Descuento aplicado sobre carta. Imprescindible identificarse.</p>
+                <p class="text-xs text-gray-600 mt-2">Descuento aplicado sobre carta. No válido de viernes noche a domingo.</p>
             </div>
         </section>
 
         <!-- ACTIVIDADES -->
         <section id="actividades" class="content-section hidden">
-            <h2 class="section-title">Actividades</h2>
+            <h2 class="section-title">Actividades y Tours</h2>
             <div class="card">
                 <h4 class="font-bold text-sm">Andalucía a Pie (20% DTO)</h4>
-                <p class="text-xs text-gray-500 mb-2 font-mono">Código: INTERESCUELAS20</p>
+                <p class="text-xs font-mono mb-2">Código: INTERESCUELAS20</p>
+                <a href="https://andaluciapie.es/" target="_blank" class="text-xs text-red-800 underline">Web Oficial</a>
             </div>
             <div class="card">
                 <h4 class="font-bold text-sm">Lolita's Tour (15% DTO)</h4>
-                <p class="text-xs text-gray-500 mb-2 font-mono uppercase">Código: INTERESCUELAS15</p>
+                <p class="text-xs font-mono mb-2">Código: INTERESCUELAS15</p>
+                <a href="https://www.lolitastours.com" target="_blank" class="text-xs text-red-800 underline">Web Oficial</a>
+            </div>
+            <div class="card">
+                <h4 class="font-bold text-sm">Flamenco - Tablaos</h4>
+                <div class="mt-2 space-y-3 text-xs">
+                    <div class="border-t pt-2"><b>La Alboreá:</b> Precio especial 14€</div>
+                    <div class="border-t pt-2"><b>Jardines de Zoraya:</b> 20% DTO (INTERESCUELAS20)</div>
+                    <div class="border-t pt-2"><b>La Soleá:</b> 20% DTO (<a href="https://wa.me/34615243105" class="underline">WhatsApp</a>)</div>
+                </div>
             </div>
         </section>
 
@@ -226,6 +240,7 @@
                 <li class="card border-none bg-white">🕌 <b>Jardines de la Alhambra</b></li>
                 <li class="card border-none bg-white">⛪ <b>Catedral y Capilla Real</b></li>
                 <li class="card border-none bg-white">🌅 <b>Mirador de San Nicolás</b></li>
+                <li class="card border-none bg-white">💃 <b>Barrio del Sacromonte</b></li>
             </ul>
         </section>
 
@@ -233,22 +248,38 @@
         <section id="colaboradores" class="content-section hidden">
             <h2 class="section-title">Colaboradores</h2>
             <div class="grid grid-cols-2 gap-4">
-                <div class="bg-white p-4 rounded shadow-sm text-center text-xs text-gray-400">Logo Alsa</div>
-                <div class="bg-white p-4 rounded shadow-sm text-center text-xs text-gray-400">Logo Luna</div>
+                <div class="bg-white p-4 rounded shadow-sm text-center text-xs text-gray-400 border">Logo Alsa</div>
+                <div class="bg-white p-4 rounded shadow-sm text-center text-xs text-gray-400 border">Logo Luna Granada</div>
+                <div class="bg-white p-4 rounded shadow-sm text-center text-xs text-gray-400 border">Logo Libere</div>
+                <div class="bg-white p-4 rounded shadow-sm text-center text-xs text-gray-400 border">Logo Lolita's</div>
             </div>
         </section>
 
         <!-- CONTACTO -->
         <section id="contacto" class="content-section hidden">
             <h2 class="section-title">Contacto</h2>
-            <div class="space-y-4">
-                <a href="mailto:interescuelas2026@eipvirtual.com" class="contact-link">
-                    <i class="fa-solid fa-envelope text-red-800"></i>
-                    <p class="text-sm">interescuelas2026@eipvirtual.com</p>
+            <div class="space-y-3">
+                <a href="https://whatsapp.com/channel/0029VbBu96r7j6gB3wr6Wa0g" class="contact-link">
+                    <i class="fa-brands fa-whatsapp text-green-600 text-xl"></i>
+                    <div>
+                        <p class="text-xs text-gray-500 font-bold uppercase">Canal de Noticias</p>
+                        <p class="text-sm">Únete para info en directo</p>
+                    </div>
                 </a>
+                <div class="contact-link">
+                    <i class="fa-solid fa-user-tie text-blue-600 text-xl"></i>
+                    <div>
+                        <p class="text-xs text-gray-500 font-bold uppercase">Organización</p>
+                        <p class="text-sm">Paloma: 695 07 80 40</p>
+                    </div>
+                </div>
                 <a href="https://instagram.com/interescuelaseip" target="_blank" class="contact-link">
-                    <i class="fa-brands fa-instagram text-pink-600"></i>
+                    <i class="fa-brands fa-instagram text-pink-600 text-xl"></i>
                     <p class="text-sm">@interescuelaseip</p>
+                </a>
+                <a href="mailto:interescuelas2026@eipvirtual.com" class="contact-link">
+                    <i class="fa-solid fa-envelope text-red-800 text-xl"></i>
+                    <p class="text-sm">Email Oficial</p>
                 </a>
             </div>
         </section>
@@ -266,8 +297,14 @@
                 section.classList.add('hidden');
             });
             document.getElementById(sectionId).classList.remove('hidden');
-            document.querySelectorAll('.nav-pill').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('btn-' + sectionId).classList.add('active');
+            
+            document.querySelectorAll('.nav-pill').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            const activeBtn = document.getElementById('id-btn-' + sectionId) || document.getElementById('btn-' + sectionId);
+            if(activeBtn) activeBtn.classList.add('active');
+            
             window.scrollTo({top: 0, behavior: 'smooth'});
         }
     </script>
