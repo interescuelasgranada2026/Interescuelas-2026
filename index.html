@@ -29,6 +29,8 @@
             border-left: 4px solid var(--color-granate);
             margin-bottom: 1rem;
             padding: 1.25rem;
+            position: relative;
+            overflow: hidden;
         }
         .nav-pill {
             background: #f1f1f1;
@@ -82,6 +84,22 @@
             object-fit: contain;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
+        .colab-logo {
+            width: 100%;
+            height: 60px;
+            object-fit: contain;
+            filter: grayscale(20%);
+            transition: filter 0.3s ease;
+        }
+        .colab-logo:hover {
+            filter: grayscale(0%);
+        }
+        .card-icon-img {
+            height: 30px;
+            width: auto;
+            object-fit: contain;
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body class="pb-20">
@@ -92,10 +110,8 @@
             <h1 class="text-3xl font-bold tracking-widest uppercase">Interescuelas</h1>
             <p class="text-xl opacity-90 mt-2">Granada 2026</p>
             <div class="mt-4 flex justify-center">
-                <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center p-2 shadow-lg overflow-hidden">
-                   <!-- LOGO DEL EVENTO ACTUALIZADO -->
-                   <img id="logo-img" src="https://i.postimg.cc/NM785kw8/Logo-1.jpg" alt="Logo Interescuelas" class="w-full h-full object-contain" 
-                        onerror="this.parentElement.innerHTML='<i class=\'fa-solid fa-graduation-cap text-red-800 text-4xl\'></i>'">
+                <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center p-2 shadow-lg overflow-hidden border-2 border-white">
+                   <img id="logo-img" src="https://i.postimg.cc/NM785kw8/Logo-1.jpg" alt="Logo Interescuelas" class="w-full h-full object-contain">
                 </div>
             </div>
             <p class="mt-4 italic text-sm">"Don de gentes, arte en el protocolo"</p>
@@ -129,22 +145,21 @@
             </p>
         </section>
 
-        <!-- PROGRAMA ACTUALIZADO -->
+        <!-- PROGRAMA -->
         <section id="programa" class="content-section hidden text-center">
             <h2 class="section-title">Programa Oficial</h2>
-            <p class="text-xs text-gray-500 mb-4 italic">Toca las imágenes para ver en detalle</p>
             <div class="space-y-6">
                 <div class="rounded-lg border shadow-sm bg-white p-2">
                     <p class="font-bold text-red-800 mb-2 uppercase text-xs">Jueves 16 Abril</p>
-                    <img src="https://i.postimg.cc/jCjhVwmy/fe7f7a28.jpg" alt="Programa Jueves" class="program-img" onerror="this.src='https://via.placeholder.com/400x200?text=Imagen+Jueves+No+Disponible'">
+                    <img src="https://i.postimg.cc/jCjhVwmy/fe7f7a28.jpg" alt="Programa Jueves" class="program-img">
                 </div>
                 <div class="rounded-lg border shadow-sm bg-white p-2">
                     <p class="font-bold text-red-800 mb-2 uppercase text-xs">Viernes 17 Abril</p>
-                    <img src="https://i.postimg.cc/mD8cvXs8/VIERNES.jpg" alt="Programa Viernes" class="program-img" onerror="this.src='https://via.placeholder.com/400x200?text=Imagen+Viernes+No+Disponible'">
+                    <img src="https://i.postimg.cc/mD8cvXs8/VIERNES.jpg" alt="Programa Viernes" class="program-img">
                 </div>
                 <div class="rounded-lg border shadow-sm bg-white p-2">
                     <p class="font-bold text-red-800 mb-2 uppercase text-xs">Sábado 18 Abril</p>
-                    <img src="https://i.postimg.cc/rsHDmDzN/SABADO.jpg" alt="Programa Sábado" class="program-img" onerror="this.src='https://via.placeholder.com/400x200?text=Imagen+Sábado+No+Disponible'">
+                    <img src="https://i.postimg.cc/rsHDmDzN/SABADO.jpg" alt="Programa Sábado" class="program-img">
                 </div>
             </div>
         </section>
@@ -153,18 +168,16 @@
         <section id="transporte" class="content-section hidden">
             <h2 class="section-title">Transporte</h2>
             <div class="card">
+                <img src="https://i.postimg.cc/JzzBqWCq/ALSA-2019-logo-svg.png" class="card-icon-img" alt="Alsa">
                 <div class="flex justify-between items-start mb-4">
                     <h3 class="font-bold text-xl text-blue-800">ALSA</h3>
                     <span class="discount-badge">-15% DTO.</span>
                 </div>
-                <p class="text-sm mb-4">Aplicable en todas las rutas con <b>origen o destino Granada</b>.</p>
+                <p class="text-sm mb-4">Aplicable en rutas con <b>origen o destino Granada</b>.</p>
                 <div class="bg-gray-50 p-4 rounded-lg border-2 border-dashed border-red-200 text-center">
                     <p class="text-xs text-gray-500 uppercase font-bold mb-1">Código de descuento</p>
                     <p class="text-2xl font-mono font-bold text-red-800 tracking-widest">EI2026</p>
                 </div>
-                <ul class="mt-4 text-[11px] space-y-2 text-gray-600">
-                    <li><i class="fa-solid fa-calendar-check mr-2"></i><b>Fechas:</b> Del 14 al 21 de abril.</li>
-                </ul>
             </div>
         </section>
 
@@ -172,25 +185,25 @@
         <section id="alojamiento" class="content-section hidden">
             <h2 class="section-title">Alojamiento</h2>
             <div class="card">
+                <img src="https://i.postimg.cc/gcMph94b/Logotipo-Group-01-2-1.png" class="card-icon-img" alt="Luna de Granada">
                 <div class="flex justify-between items-center mb-2">
                     <h3 class="font-bold text-sm">Gran Hotel Luna de Granada</h3>
                     <span class="discount-badge">10%</span>
                 </div>
-                <p class="text-xs text-gray-500 mb-3 font-mono">Código: ENCUENTROINTERESCUELAS</p>
-                <div class="space-y-2">
-                    <a href="tel:958089920" class="contact-link text-sm"><i class="fa-solid fa-phone text-red-700"></i> 958 08 99 20</a>
-                    <a href="https://www.delunahotels.com/granada/hoteles/gran-hotel-luna-de-granada" target="_blank" class="contact-link text-sm"><i class="fa-solid fa-globe text-red-700"></i> Web Oficial</a>
-                </div>
+                <p class="text-xs text-gray-500 mb-3 font-mono">Cód: ENCUENTROINTERESCUELAS</p>
+                <a href="tel:958089920" class="contact-link text-sm"><i class="fa-solid fa-phone text-red-700"></i> 958 08 99 20</a>
             </div>
             <div class="card">
+                <img src="https://i.postimg.cc/L55rDXDG/29046-logo-Libere-Hospitality.jpg" class="card-icon-img" alt="Libere">
                 <div class="flex justify-between items-center mb-2">
                     <h3 class="font-bold text-sm">Libere Granada Catedral</h3>
                     <span class="discount-badge">15%</span>
                 </div>
-                <p class="text-xs text-gray-500 mb-3 font-mono">Código: LIBEREEIP2026</p>
-                <a href="https://www.staylibere.com/es/apartamentos/libere-granada-catedral" target="_blank" class="contact-link text-sm"><i class="fa-solid fa-globe text-red-700"></i> Reservar</a>
+                <p class="text-xs text-gray-500 mb-3 font-mono">Cód: LIBEREEIP2026</p>
+                <a href="https://www.staylibere.com/es/apartamentos/libere-granada-catedral" target="_blank" class="contact-link text-sm"><i class="fa-solid fa-globe text-red-700"></i> Web Oficial</a>
             </div>
             <div class="card">
+                <img src="https://i.postimg.cc/9FqkQsn9/Apartamentos-Campo-Del-Principe-Logo-color.png" class="card-icon-img" alt="Campo del Principe">
                 <h3 class="font-bold text-sm mb-2">Apartamentos Campo del Príncipe</h3>
                 <div class="bg-yellow-50 p-3 rounded-lg border border-yellow-200 mb-3 text-[11px]">
                     <p class="font-bold text-yellow-800 uppercase">Beneficio:</p>
@@ -204,9 +217,25 @@
         <section id="comer" class="content-section hidden">
             <h2 class="section-title">Dónde Comer</h2>
             <div class="card">
-                <h3 class="font-bold text-sm uppercase">Mirador de Aixa</h3>
+                <img src="https://i.postimg.cc/d1YWD0gR/logo-(1).png" class="card-icon-img" alt="Mirador de Aixa">
+                <h3 class="font-bold text-sm uppercase">Restaurante Carmen Mirador de Aixa</h3>
                 <span class="discount-badge inline-block mt-1">5% DTO.</span>
-                <p class="text-xs text-gray-600 mt-2">Descuento aplicado sobre carta. No válido de viernes noche a domingo.</p>
+                <p class="text-xs text-gray-600 mt-2">Sobre carta. No válido de viernes noche a domingo.</p>
+            </div>
+            <div class="card">
+                <img src="https://i.postimg.cc/yYkT19WQ/1000002616-600x600.jpg" class="card-icon-img" alt="Bar Pakillo" style="border-radius: 50%;">
+                <h3 class="font-bold text-sm uppercase">Bar Pakillo</h3>
+                <p class="text-xs text-gray-600 mt-1 italic">Lo mejor en tapas tradicionales.</p>
+            </div>
+            <div class="card">
+                <img src="https://i.postimg.cc/PJN1qsfN/sababera99.png" class="card-icon-img" alt="Sabanera 99">
+                <h3 class="font-bold text-sm uppercase">Sabanera 99</h3>
+                <p class="text-xs text-gray-600 mt-1 italic">Punto de encuentro gastronómico.</p>
+            </div>
+            <div class="card">
+                <img src="https://i.postimg.cc/L61ZQVJ1/images-(4).png" class="card-icon-img" alt="Bar Toles Plaza">
+                <h3 class="font-bold text-sm uppercase">Bar Toles Plaza</h3>
+                <p class="text-xs text-gray-600 mt-1 italic">Calidad y buen ambiente en el centro.</p>
             </div>
         </section>
 
@@ -214,21 +243,99 @@
         <section id="actividades" class="content-section hidden">
             <h2 class="section-title">Actividades y Tours</h2>
             <div class="card">
+                <img src="https://i.postimg.cc/rpWWdNkM/logo-1.png" class="card-icon-img" alt="Walk In Granada">
+                <div class="flex justify-between items-center mb-2">
+                    <h4 class="font-bold text-sm">Walk In Granada</h4>
+                    <span class="discount-badge">20% DTO</span>
+                </div>
+                <p class="text-xs font-mono mb-2 text-gray-500 uppercase">Cód: INTERESCUELAS20</p>
+                <a href="https://walkingranada.com/" target="_blank" class="text-xs text-red-800 underline">Web Oficial</a>
+            </div>
+            <div class="card">
+                <img src="https://i.postimg.cc/x1fF3qdJ/Andalucia-A-PIE-Granada-01-300x288.png" class="card-icon-img" alt="Andalucia a Pie">
                 <h4 class="font-bold text-sm">Andalucía a Pie (20% DTO)</h4>
-                <p class="text-xs font-mono mb-2">Código: INTERESCUELAS20</p>
+                <p class="text-xs font-mono mb-2 text-gray-500 uppercase">Cód: INTERESCUELAS20</p>
                 <a href="https://andaluciapie.es/" target="_blank" class="text-xs text-red-800 underline">Web Oficial</a>
             </div>
             <div class="card">
+                <img src="https://i.postimg.cc/wTHW93DH/Logo.png" class="card-icon-img" alt="Lolitas Tour">
                 <h4 class="font-bold text-sm">Lolita's Tour (15% DTO)</h4>
-                <p class="text-xs font-mono mb-2">Código: INTERESCUELAS15</p>
+                <p class="text-xs font-mono mb-2 text-gray-500 uppercase">Cód: INTERESCUELAS15</p>
                 <a href="https://www.lolitastours.com" target="_blank" class="text-xs text-red-800 underline">Web Oficial</a>
             </div>
+            <!-- SECCIÓN TABLAOS ACTUALIZADA CON LOGOS -->
             <div class="card">
-                <h4 class="font-bold text-sm">Flamenco - Tablaos</h4>
-                <div class="mt-2 space-y-3 text-xs">
-                    <div class="border-t pt-2"><b>La Alboreá:</b> Precio especial 14€</div>
-                    <div class="border-t pt-2"><b>Jardines de Zoraya:</b> 20% DTO (INTERESCUELAS20)</div>
-                    <div class="border-t pt-2"><b>La Soleá:</b> 20% DTO (<a href="https://wa.me/34615243105" class="underline">WhatsApp</a>)</div>
+                <h4 class="font-bold text-sm mb-4">Flamenco y Tablaos</h4>
+                <div class="space-y-6">
+                    <div class="border-t pt-3">
+                        <img src="https://i.postimg.cc/qvGqWD46/logo-tablao-alborea-2020.png" class="card-icon-img" alt="La Alborea">
+                        <p class="font-bold text-xs mt-1">La Alboreá</p>
+                        <p class="text-[11px] text-gray-600">Precio especial: 14€</p>
+                    </div>
+                    <div class="border-t pt-3">
+                        <img src="https://i.postimg.cc/pLjykV1r/images.jpg" class="card-icon-img" alt="Zoraya">
+                        <p class="font-bold text-xs mt-1">Jardines de Zoraya</p>
+                        <span class="discount-badge text-[10px]">20% DTO</span>
+                    </div>
+                    <div class="border-t pt-3">
+                        <img src="https://i.postimg.cc/44zg87Jy/maxresdefault.jpg" class="card-icon-img" alt="La Solea">
+                        <p class="font-bold text-xs mt-1">La Soleá</p>
+                        <span class="discount-badge text-[10px]">20% DTO</span>
+                    </div>
+                    <div class="border-t pt-3">
+                        <img src="https://i.postimg.cc/bwr4jsjJ/images-(3).png" class="card-icon-img" alt="Casa Ana">
+                        <p class="font-bold text-xs mt-1">Tablao Flamenco Casa Ana</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COLABORADORES -->
+        <section id="colaboradores" class="content-section hidden">
+            <h2 class="section-title">Instituciones y Colaboradores</h2>
+            
+            <div class="mb-8">
+                <p class="text-xs font-bold text-gray-400 mb-4 uppercase tracking-wider">Instituciones</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-3 rounded shadow-sm flex items-center justify-center border h-24">
+                        <img src="https://i.postimg.cc/VvFdqK7t/ayuntamiento-granada-grx.png" class="colab-logo" alt="Ayuntamiento de Granada">
+                    </div>
+                    <div class="bg-white p-3 rounded shadow-sm flex items-center justify-center border h-24">
+                        <img src="https://i.postimg.cc/SxPjf2r0/Logo2.png" class="colab-logo" alt="Diputación de Granada">
+                    </div>
+                    <div class="bg-white p-3 rounded shadow-sm flex items-center justify-center border h-24 col-span-2">
+                        <img src="https://i.postimg.cc/hP5KkF7L/images.png" class="colab-logo" alt="Instituto Andaluz de la Juventud">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <p class="text-xs font-bold text-gray-400 mb-4 uppercase tracking-wider">Empresas Colaboradoras</p>
+                <div class="grid grid-cols-2 gap-3">
+                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/JzzBqWCq/ALSA-2019-logo-svg.png" class="colab-logo" alt="Alsa">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/9F36ZWZ2/CODICE-LOGO-amarillo.png" class="colab-logo" alt="Cödice Experience">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/gcMph94b/Logotipo-Group-01-2-1.png" class="colab-logo" alt="Luna de Granada">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/L55rDXDG/29046-logo-Libere-Hospitality.jpg" class="colab-logo" alt="Libere">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/rpWWdNkM/logo-1.png" class="colab-logo" alt="Walk in Granada">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/9FqkQsn9/Apartamentos-Campo-Del-Principe-Logo-color.png" class="colab-logo" alt="Campo del Principe">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/RVHMxs1d/images-(1).png" class="colab-logo" alt="Palacio Flamenco">
+                    </div>
+                    <div class="bg-white p-2 rounded shadow-sm border h-20 flex items-center justify-center">
+                        <img src="https://i.postimg.cc/yxFscWN1/images-(2).png" class="colab-logo" alt="Teatro Flamenco">
+                    </div>
                 </div>
             </div>
         </section>
@@ -244,33 +351,22 @@
             </ul>
         </section>
 
-        <!-- COLABORADORES -->
-        <section id="colaboradores" class="content-section hidden">
-            <h2 class="section-title">Colaboradores</h2>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-white p-4 rounded shadow-sm text-center text-xs text-gray-400 border">Logo Alsa</div>
-                <div class="bg-white p-4 rounded shadow-sm text-center text-xs text-gray-400 border">Logo Luna Granada</div>
-                <div class="bg-white p-4 rounded shadow-sm text-center text-xs text-gray-400 border">Logo Libere</div>
-                <div class="bg-white p-4 rounded shadow-sm text-center text-xs text-gray-400 border">Logo Lolita's</div>
-            </div>
-        </section>
-
         <!-- CONTACTO -->
         <section id="contacto" class="content-section hidden">
             <h2 class="section-title">Contacto</h2>
             <div class="space-y-3">
-                <a href="https://whatsapp.com/channel/0029VbBu96r7j6gB3wr6Wa0g" class="contact-link">
-                    <i class="fa-brands fa-whatsapp text-green-600 text-xl"></i>
+                <a href="https://whatsapp.com/channel/0029VbBu96r7j6gB3wr6Wa0g" class="contact-link hover:bg-green-50 transition-colors">
+                    <i class="fa-brands fa-whatsapp text-green-600 text-2xl"></i>
                     <div>
-                        <p class="text-xs text-gray-500 font-bold uppercase">Canal de Noticias</p>
-                        <p class="text-sm">Únete para info en directo</p>
+                        <p class="text-xs text-gray-500 font-bold uppercase">Canal Informativo</p>
+                        <p class="text-sm font-semibold">Info oficial en tiempo real</p>
                     </div>
                 </a>
                 <div class="contact-link">
                     <i class="fa-solid fa-user-tie text-blue-600 text-xl"></i>
                     <div>
-                        <p class="text-xs text-gray-500 font-bold uppercase">Organización</p>
-                        <p class="text-sm">Paloma: 695 07 80 40</p>
+                        <p class="text-xs text-gray-500 font-bold uppercase">Gestión Interescuelas</p>
+                        <p class="text-sm">Paloma: <b>695 07 80 40</b></p>
                     </div>
                 </div>
                 <a href="https://instagram.com/interescuelaseip" target="_blank" class="contact-link">
@@ -279,7 +375,7 @@
                 </a>
                 <a href="mailto:interescuelas2026@eipvirtual.com" class="contact-link">
                     <i class="fa-solid fa-envelope text-red-800 text-xl"></i>
-                    <p class="text-sm">Email Oficial</p>
+                    <p class="text-sm">interescuelas2026@eipvirtual.com</p>
                 </a>
             </div>
         </section>
