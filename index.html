@@ -179,21 +179,42 @@
             </p>
         </section>
 
+        
         <!-- PROGRAMA -->
         <section id="programa" class="content-section hidden text-center">
             <h2 class="section-title">Programa Oficial</h2>
             <div class="space-y-6">
+                <!-- JUEVES -->
                 <div class="rounded-lg border shadow-sm bg-white p-2">
-                    <p class="font-bold text-red-800 mb-2 uppercase text-xs">Jueves 16 Abril</p>
-                    <img src="https://i.postimg.cc/CMGrqb4r/JUEVES.jpg" alt="Programa Jueves" class="program-img">
+                    <img src="https://i.postimg.cc/brzVjZC6/JUEVES-DESPLEGABLE.png" 
+                         alt="Portada Jueves" 
+                         class="program-img cursor-pointer hover:opacity-80 transition-opacity"
+                         onclick="toggleProgram('jueves')">
+                    <div id="programa-jueves" class="hidden mt-4">
+                        <img src="https://i.postimg.cc/CMGrqb4r/JUEVES.jpg" alt="Programa Jueves" class="program-img">
+                    </div>
                 </div>
+
+                <!-- VIERNES -->
                 <div class="rounded-lg border shadow-sm bg-white p-2">
-                    <p class="font-bold text-red-800 mb-2 uppercase text-xs">Viernes 17 Abril</p>
-                    <img src="https://i.postimg.cc/mD8cvXs8/VIERNES.jpg" alt="Programa Viernes" class="program-img">
+                    <img src="https://i.postimg.cc/Ghg7Zhk9/VIERNES-DESPLEGABLE.png" 
+                         alt="Portada Viernes" 
+                         class="program-img cursor-pointer hover:opacity-80 transition-opacity"
+                         onclick="toggleProgram('viernes')">
+                    <div id="programa-viernes" class="hidden mt-4">
+                        <img src="https://i.postimg.cc/mD8cvXs8/VIERNES.jpg" alt="Programa Viernes" class="program-img">
+                    </div>
                 </div>
+
+                <!-- SÁBADO -->
                 <div class="rounded-lg border shadow-sm bg-white p-2">
-                    <p class="font-bold text-red-800 mb-2 uppercase text-xs">Sábado 18 Abril</p>
-                    <img src="https://i.postimg.cc/rsHDmDzN/SABADO.jpg" alt="Programa Sábado" class="program-img">
+                    <img src="https://i.postimg.cc/vBy3W1sy/SABADO-TITULO.png" 
+                         alt="Portada Sábado" 
+                         class="program-img cursor-pointer hover:opacity-80 transition-opacity"
+                         onclick="toggleProgram('sabado')">
+                    <div id="programa-sabado" class="hidden mt-4">
+                        <img src="https://i.postimg.cc/rsHDmDzN/SABADO.jpg" alt="Programa Sábado" class="program-img">
+                    </div>
                 </div>
             </div>
         </section>
@@ -683,6 +704,15 @@
             if(activeBtn) activeBtn.classList.add('active');
             
             window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+        
+        function toggleProgram(dia) {
+            const programaDiv = document.getElementById('programa-' + dia);
+            if (programaDiv.classList.contains('hidden')) {
+                programaDiv.classList.remove('hidden');
+            } else {
+                programaDiv.classList.add('hidden');
+            }
         }
     </script>
 </body>
