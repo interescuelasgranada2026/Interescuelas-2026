@@ -786,93 +786,193 @@
         <!-- QUÉ VER -->
         <section id="ver" class="content-section hidden">
             <h2 class="section-title">Qué Ver</h2>
+            <p class="text-sm text-gray-600 mb-6 italic">¡Pulsa en cada lugar para ver más información!</p>
             
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-building text-red-800"></i>
-                    El Albaicín
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">Barrio histórico con calles empedradas y ambiente morisco, perfecto para perderse y disfrutar de las vistas hacia la Alhambra.</p>
+            <!-- El Albaicín -->
+            <div class="card cursor-pointer" onclick="togglePlace('albaicin')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-building text-red-800"></i>
+                        El Albaicín
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-albaicin" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">Barrio histórico con calles empedradas y ambiente morisco, perfecto para perderse y disfrutar de las vistas hacia la Alhambra.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Albaicín,+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> Albaicín, Granada
+                    </a>
+                </div>
             </div>
 
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-mountain text-red-800"></i>
-                    Mirador de San Nicolás
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">El mirador más famoso de Granada, con las mejores vistas panorámicas de la Alhambra y Sierra Nevada al fondo. Ideal para el atardecer.</p>
+            <!-- Mirador de San Nicolás -->
+            <div class="card cursor-pointer" onclick="togglePlace('san-nicolas')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-mountain text-red-800"></i>
+                        Mirador de San Nicolás
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-san-nicolas" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">El mirador más famoso de Granada, con las mejores vistas panorámicas de la Alhambra y Sierra Nevada al fondo. Ideal para el atardecer.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Mirador+de+San+Nicolás,+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> Plaza de San Nicolás, Albaicín
+                    </a>
+                </div>
             </div>
 
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-water text-red-800"></i>
-                    Paseo de los Tristes
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">Un paseo junto al río Darro, a los pies de la Alhambra, lleno de encanto y con unas vistas preciosas al monumento.</p>
+            <!-- Paseo de los Tristes -->
+            <div class="card cursor-pointer" onclick="togglePlace('tristes')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-water text-red-800"></i>
+                        Paseo de los Tristes
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-tristes" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">Un paseo junto al río Darro, a los pies de la Alhambra, lleno de encanto y con unas vistas preciosas al monumento.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Paseo+de+los+Tristes,+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> Paseo del Padre Manjón (Paseo de los Tristes)
+                    </a>
+                </div>
             </div>
 
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-road text-red-800"></i>
-                    Carrera del Darro
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">Considerada una de las calles más bonitas de España. Discurre junto al río Darro y respira la esencia de Granada antigua.</p>
+            <!-- Carrera del Darro -->
+            <div class="card cursor-pointer" onclick="togglePlace('darro')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-road text-red-800"></i>
+                        Carrera del Darro
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-darro" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">Considerada una de las calles más bonitas de España. Discurre junto al río Darro y respira la esencia de Granada antigua.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Carrera+del+Darro,+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> Carrera del Darro, Centro
+                    </a>
+                </div>
             </div>
 
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-mug-hot text-red-800"></i>
-                    Calle Calderería Nueva
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">Conocida como la "calle de las teterías", repleta de teterías árabes y tiendas de artesanía. Ambiente bohemio y multicultural.</p>
+            <!-- Calle Calderería Nueva -->
+            <div class="card cursor-pointer" onclick="togglePlace('calderia')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-mug-hot text-red-800"></i>
+                        Calle Calderería Nueva
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-calderia" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">Conocida como la "calle de las teterías", repleta de teterías árabes y tiendas de artesanía. Ambiente bohemio y multicultural.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Calle+Calderería+Nueva,+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> C. Calderería Nueva, Centro
+                    </a>
+                </div>
             </div>
 
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-guitar text-red-800"></i>
-                    Sacromonte
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">Famoso por sus cuevas y espectáculos de flamenco auténtico. Un rincón imprescindible para empaparse del folclore granadino.</p>
+            <!-- Sacromonte -->
+            <div class="card cursor-pointer" onclick="togglePlace('sacromonte')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-guitar text-red-800"></i>
+                        Sacromonte
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-sacromonte" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">Famoso por sus cuevas y espectáculos de flamenco auténtico. Un rincón imprescindible para empaparse del folclore granadino.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Sacromonte,+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> Sacromonte, Granada
+                    </a>
+                </div>
             </div>
 
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-church text-red-800"></i>
-                    Catedral de Granada
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">Impresionante obra maestra del Renacimiento español. Su interior es espectacular con una majestuosa cúpula y capillas decoradas.</p>
+            <!-- Catedral de Granada -->
+            <div class="card cursor-pointer" onclick="togglePlace('catedral')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-church text-red-800"></i>
+                        Catedral de Granada
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-catedral" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">Impresionante obra maestra del Renacimiento español. Su interior es espectacular con una majestuosa cúpula y capillas decoradas.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Catedral+de+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> C. Gran Vía de Colón, 5, Centro
+                    </a>
+                </div>
             </div>
 
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-crown text-red-800"></i>
-                    Capilla Real
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">Mausoleo de los Reyes Católicos, Isabel y Fernando. Un lugar cargado de historia con una arquitectura gótica impresionante.</p>
+            <!-- Capilla Real -->
+            <div class="card cursor-pointer" onclick="togglePlace('capilla-real')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-crown text-red-800"></i>
+                        Capilla Real
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-capilla-real" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">Mausoleo de los Reyes Católicos, Isabel y Fernando. Un lugar cargado de historia con una arquitectura gótica impresionante.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Capilla+Real+de+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> C. Oficios, s/n, Centro
+                    </a>
+                </div>
             </div>
 
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-flask text-red-800"></i>
-                    Parque de las Ciencias
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">Museo interactivo perfecto para visitar en familia. Espacios para experimentar y aprender de forma divertida sobre ciencia y tecnología.</p>
+            <!-- Parque de las Ciencias -->
+            <div class="card cursor-pointer" onclick="togglePlace('parque-ciencias')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-flask text-red-800"></i>
+                        Parque de las Ciencias
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-parque-ciencias" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">Museo interactivo perfecto para visitar en familia. Espacios para experimentar y aprender de forma divertida sobre ciencia y tecnología.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Parque+de+las+Ciencias,+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> Av. de la Ciencia, s/n
+                    </a>
+                </div>
             </div>
 
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-mountain text-red-800"></i>
-                    Sierra Nevada
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">A solo 30 minutos de Granada, la estación de esquí más meridional de Europa. Paisajes espectaculares y nieve en primavera. Perfecta para una excursión de día.</p>
+            <!-- Sierra Nevada -->
+            <div class="card cursor-pointer" onclick="togglePlace('sierra-nevada')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-mountain text-red-800"></i>
+                        Sierra Nevada
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-sierra-nevada" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">A solo 30 minutos de Granada, la estación de esquí más meridional de Europa. Paisajes espectaculares y nieve en primavera. Perfecta para una excursión de día.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Sierra+Nevada,+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> Sierra Nevada (30 min desde Granada)
+                    </a>
+                </div>
             </div>
 
-            <div class="card">
-                <h3 class="font-bold text-sm flex items-center gap-2">
-                    <i class="fa-solid fa-binoculars text-red-800"></i>
-                    Mirador de San Miguel Alto
-                </h3>
-                <p class="text-xs text-gray-600 mt-2">El punto más alto del Albaicín con vistas panorámicas de 360° sobre Granada, la Alhambra, Sierra Nevada y la Vega. Ideal para fotografía y atardeceres inolvidables.</p>
+            <!-- Mirador de San Miguel Alto -->
+            <div class="card cursor-pointer" onclick="togglePlace('san-miguel-alto')">
+                <div class="flex justify-between items-center">
+                    <h3 class="font-bold text-sm flex items-center gap-2">
+                        <i class="fa-solid fa-binoculars text-red-800"></i>
+                        Mirador de San Miguel Alto
+                    </h3>
+                    <i class="fa-solid fa-chevron-down text-gray-400"></i>
+                </div>
+                <div id="place-san-miguel-alto" class="hidden mt-3 pt-3 border-t">
+                    <p class="text-xs text-gray-600 mb-3">El punto más alto del Albaicín con vistas panorámicas de 360° sobre Granada, la Alhambra, Sierra Nevada y la Vega. Ideal para fotografía y atardeceres inolvidables.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Mirador+de+San+Miguel+Alto,+Granada" target="_blank" class="text-[11px] flex items-center gap-2 text-red-800">
+                        <i class="fa-solid fa-location-dot"></i> Camino Nuevo de San Nicolás, Albaicín
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -982,6 +1082,15 @@
                 programaDiv.classList.remove('hidden');
             } else {
                 programaDiv.classList.add('hidden');
+            }
+        }
+
+        function togglePlace(placeId) {
+            const placeDiv = document.getElementById('place-' + placeId);
+            if (placeDiv.classList.contains('hidden')) {
+                placeDiv.classList.remove('hidden');
+            } else {
+                placeDiv.classList.add('hidden');
             }
         }
     </script>
