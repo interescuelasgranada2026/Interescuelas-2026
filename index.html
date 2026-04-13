@@ -163,6 +163,7 @@
         <button onclick="showSection('inscripcion')" class="nav-pill" id="id-btn-inscripcion">Inscripción</button>
         <button onclick="showSection('consignas')" class="nav-pill" id="id-btn-contacto">Consignas</button>
         <button onclick="showSection('movilidad')" class="nav-pill" id="id-btn-movilidad">Movilidad Granada</button>
+        <button onclick="showSection('aparcamiento')" class="nav-pill" id="id-btn-aparcamiento">Zonas de aparcamiento y parkings</button>
         <button onclick="showSection('colaboradores')" class="nav-pill" id="id-btn-colaboradores">Colaboradores</button>
         <button onclick="showSection('contacto')" class="nav-pill" id="id-btn-contacto">Contacto</button>
     </nav>
@@ -862,6 +863,394 @@
                 </div>
             </div>
         </section> 
+
+        <!-- ZONAS DE APARCAMIENTO Y PARKINGS -->
+        <section id="aparcamiento" class="content-section hidden">
+            <h2 class="section-title">Zonas de Aparcamiento y Parkings</h2>
+            <p class="text-sm text-gray-600 mb-6 italic">Información sobre aparcamientos gratuitos y parkings de pago en Granada.</p>
+
+            <!-- ZONAS DE APARCAMIENTO GRATUITO -->
+            <div class="card bg-green-50 border-green-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fa-solid fa-circle-check text-3xl text-green-700"></i>
+                    <h3 class="font-bold text-lg text-green-800">Zonas de Aparcamiento Gratuito</h3>
+                </div>
+
+                <!-- Nevada Shopping -->
+                <div class="bg-white p-4 rounded border mb-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800">Centro Comercial Nevada Shopping</h4>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-[10px] font-bold inline-block mt-1">GRATUITO</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-[10px] font-bold">6000 plazas</span>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1">TIPO</p>
+                            <p class="text-[11px] text-gray-800"><i class="fa-solid fa-layer-group mr-1"></i>Subterráneo y exterior</p>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1">DISTANCIA AL CENTRO</p>
+                            <p class="text-[11px] text-gray-800"><i class="fa-solid fa-train-subway mr-1 text-blue-600"></i>7 paradas de metro (~20 min)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-200 p-3 rounded mb-3">
+                        <p class="text-[10px] text-blue-600 font-bold mb-2">🕐 HORARIO</p>
+                        <div class="text-[11px] text-blue-800 space-y-1">
+                            <p>• <b>Dom a Jue:</b> 08:30 – 23:30</p>
+                            <p>• <b>Vie y Sáb:</b> 08:30 – 02:00</p>
+                            <p class="text-[10px] text-blue-600 mt-2 italic">✓ Se puede dejar el coche fuera de horario</p>
+                        </div>
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/mNdbspbuXLEzQVhF8" target="_blank" class="inline-flex items-center gap-2 bg-gray-800 text-white px-3 py-2 rounded text-[11px] hover:bg-gray-700 transition">
+                        <i class="fa-solid fa-location-dot"></i> Ver en Google Maps
+                    </a>
+                </div>
+
+                <!-- Parque de las Ciencias -->
+                <div class="bg-white p-4 rounded border mb-4">
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800">Parque de las Ciencias y C.C. Neptuno</h4>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-[10px] font-bold inline-block mt-1">GRATUITO</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-[10px] font-bold">CONCURRIDO</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-yellow-50 border border-yellow-300 p-3 rounded mb-3">
+                        <p class="text-[11px] text-yellow-800">
+                            <i class="fa-solid fa-star mr-1"></i>
+                            <b>La mejor zona para aparcar gratis cerca del centro</b>, pero también la más concurrida.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-2 rounded mb-3">
+                        <p class="text-[10px] text-gray-500 mb-1">DISTANCIA AL CENTRO</p>
+                        <p class="text-[11px] text-gray-800"><i class="fa-solid fa-walking mr-1"></i>15-20 minutos andando</p>
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/8Beb5DD2pQ88UE9Z7" target="_blank" class="inline-flex items-center gap-2 bg-gray-800 text-white px-3 py-2 rounded text-[11px] hover:bg-gray-700 transition">
+                        <i class="fa-solid fa-location-dot"></i> Ver en Google Maps
+                    </a>
+                </div>
+
+                <!-- Campus de la Salud -->
+                <div class="bg-white p-4 rounded border">
+                    <div class="flex justify-between items-start mb-3">
+                        <div>
+                            <h4 class="font-bold text-sm text-gray-800">Campus de la Salud</h4>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-[10px] font-bold inline-block mt-1">GRATUITO</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-[10px] font-bold">FINES DE SEMANA</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-purple-50 border border-purple-300 p-3 rounded mb-3">
+                        <p class="text-[11px] text-purple-800">
+                            <i class="fa-solid fa-calendar-week mr-1"></i>
+                            Durante los <b>fines de semana</b>, cuando la actividad académica es menor, es <b>más fácil encontrar plazas libres</b> en esta zona.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-2 rounded mb-3">
+                        <p class="text-[10px] text-gray-500 mb-1">DISTANCIA AL CENTRO</p>
+                        <p class="text-[11px] text-gray-800"><i class="fa-solid fa-bus mr-1 text-red-600"></i><i class="fa-solid fa-train-subway mr-1 text-blue-600"></i>Bien comunicado por autobús y metro (~20 min)</p>
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/UAwYub8kNBNnC5V98" target="_blank" class="inline-flex items-center gap-2 bg-gray-800 text-white px-3 py-2 rounded text-[11px] hover:bg-gray-700 transition">
+                        <i class="fa-solid fa-location-dot"></i> Ver en Google Maps
+                    </a>
+                </div>
+            </div>
+
+            <!-- PARKINGS DE PAGO -->
+            <div class="card bg-orange-50 border-orange-200">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fa-solid fa-euro-sign text-3xl text-orange-700"></i>
+                    <h3 class="font-bold text-lg text-orange-800">Parkings de Pago</h3>
+                </div>
+
+                <!-- Parking La Hípica -->
+                <div class="bg-white p-4 rounded border mb-4 relative">
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-green-500 text-white px-3 py-1 rounded-full text-[10px] font-bold shadow">MÁS BARATO</span>
+                    </div>
+                    <h4 class="font-bold text-sm text-gray-800 mb-2">Parking La Hípica</h4>
+                    <p class="text-[11px] text-gray-600 mb-3 pr-20">El aparcamiento más barato de Granada. Cerca del centro, a 5 minutos en metro, en zona tranquila, debajo de la Plaza la Hípica.</p>
+                    
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div class="bg-orange-50 p-2 rounded text-center">
+                            <p class="text-[10px] text-gray-500 mb-1">1 HORA</p>
+                            <p class="text-sm font-bold text-orange-700">0,90 €</p>
+                        </div>
+                        <div class="bg-orange-50 p-2 rounded text-center">
+                            <p class="text-[10px] text-gray-500 mb-1">1 DÍA</p>
+                            <p class="text-sm font-bold text-orange-700">13,00 €</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-clock mr-1"></i>HORARIO</p>
+                            <p class="text-[11px] text-gray-800 font-bold">Abierto 24 horas</p>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-car mr-1"></i>AFORO</p>
+                            <p class="text-[11px] text-gray-800 font-bold">951 plazas</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-2 rounded mb-3">
+                        <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-location-dot mr-1"></i>DIRECCIÓN</p>
+                        <p class="text-[11px] text-gray-800">Calle Fontiveros, 21-23, 18006 Granada</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://maps.app.goo.gl/kbaQEJEWGGvpxDXY6" target="_blank" class="inline-flex items-center gap-2 bg-gray-800 text-white px-3 py-2 rounded text-[11px] hover:bg-gray-700 transition">
+                            <i class="fa-solid fa-map-location-dot"></i> Ver en mapa
+                        </a>
+                        <a href="tel:958134650" class="inline-flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded text-[11px] hover:bg-green-700 transition">
+                            <i class="fa-solid fa-phone"></i> 958 134 650
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Parking APK2 Arabial -->
+                <div class="bg-white p-4 rounded border mb-4">
+                    <h4 class="font-bold text-sm text-gray-800 mb-2">Parking APK2 Arabial</h4>
+                    <p class="text-[11px] text-gray-600 mb-3">Situado cerca de la calle Recogidas (eje comercial de la ciudad) y al lado del Parque Federico García Lorca.</p>
+                    
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div class="bg-orange-50 p-2 rounded text-center">
+                            <p class="text-[10px] text-gray-500 mb-1">1 HORA</p>
+                            <p class="text-sm font-bold text-orange-700">2,00 €</p>
+                        </div>
+                        <div class="bg-orange-50 p-2 rounded text-center">
+                            <p class="text-[10px] text-gray-500 mb-1">1 DÍA</p>
+                            <p class="text-sm font-bold text-orange-700">13,00 €</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-clock mr-1"></i>HORARIO</p>
+                            <p class="text-[11px] text-gray-800 font-bold">Abierto 24 horas</p>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-car mr-1"></i>AFORO</p>
+                            <p class="text-[11px] text-gray-800 font-bold">451 plazas (+14m² cada una)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-2 rounded mb-3">
+                        <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-location-dot mr-1"></i>DIRECCIÓN</p>
+                        <p class="text-[11px] text-gray-800">Plaza Gerardo Cuerva s/n, 18004 Granada</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://maps.app.goo.gl/wxrt9YmCBe5HfeGF6" target="_blank" class="inline-flex items-center gap-2 bg-gray-800 text-white px-3 py-2 rounded text-[11px] hover:bg-gray-700 transition">
+                            <i class="fa-solid fa-map-location-dot"></i> Ver en mapa
+                        </a>
+                        <a href="tel:958260041" class="inline-flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded text-[11px] hover:bg-green-700 transition">
+                            <i class="fa-solid fa-phone"></i> 958 260 041
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Parking Méndez Núñez -->
+                <div class="bg-white p-4 rounded border mb-4 relative">
+                    <div class="absolute top-3 right-3">
+                        <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-[10px] font-bold shadow">2º MÁS BARATO</span>
+                    </div>
+                    <h4 class="font-bold text-sm text-gray-800 mb-2">Parking Méndez Núñez</h4>
+                    <p class="text-[11px] text-gray-600 mb-3 pr-24">El segundo parking más económico de Granada (1,50 €/hora). Fácil acceso desde la autovía.</p>
+                    
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div class="bg-orange-50 p-2 rounded text-center">
+                            <p class="text-[10px] text-gray-500 mb-1">1 HORA</p>
+                            <p class="text-sm font-bold text-orange-700">1,50 €</p>
+                        </div>
+                        <div class="bg-orange-50 p-2 rounded text-center">
+                            <p class="text-[10px] text-gray-500 mb-1">1 DÍA</p>
+                            <p class="text-sm font-bold text-orange-700">15,00 €</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-clock mr-1"></i>HORARIO</p>
+                            <p class="text-[11px] text-gray-800 font-bold">Abierto 24 horas</p>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-car mr-1"></i>AFORO</p>
+                            <p class="text-[11px] text-gray-800 font-bold">805 plazas</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-2 rounded mb-3">
+                        <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-location-dot mr-1"></i>DIRECCIÓN</p>
+                        <p class="text-[11px] text-gray-800">Calle María Moliner nº1, 18004 Granada</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://maps.app.goo.gl/xJDsLUr6hguprM6Q8" target="_blank" class="inline-flex items-center gap-2 bg-gray-800 text-white px-3 py-2 rounded text-[11px] hover:bg-gray-700 transition">
+                            <i class="fa-solid fa-map-location-dot"></i> Ver en mapa
+                        </a>
+                        <a href="tel:958277581" class="inline-flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded text-[11px] hover:bg-green-700 transition">
+                            <i class="fa-solid fa-phone"></i> 958 277 581
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Parking Severo Ochoa -->
+                <div class="bg-white p-4 rounded border mb-4">
+                    <h4 class="font-bold text-sm text-gray-800 mb-2">Parking Severo Ochoa</h4>
+                    <p class="text-[11px] text-gray-600 mb-3">Vigilado 24 horas, cerca del centro comercial e histórico de Granada.</p>
+                    
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div class="bg-orange-50 p-2 rounded text-center">
+                            <p class="text-[10px] text-gray-500 mb-1">1 HORA</p>
+                            <p class="text-sm font-bold text-orange-700">1,70 €</p>
+                        </div>
+                        <div class="bg-orange-50 p-2 rounded text-center">
+                            <p class="text-[10px] text-gray-500 mb-1">1 DÍA</p>
+                            <p class="text-sm font-bold text-orange-700">18,00 €</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-clock mr-1"></i>HORARIO</p>
+                            <p class="text-[11px] text-gray-800 font-bold">Abierto 24 horas</p>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-car mr-1"></i>AFORO</p>
+                            <p class="text-[11px] text-gray-800 font-bold">504 plazas (+15m² cada una)</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-2 rounded mb-3">
+                        <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-location-dot mr-1"></i>DIRECCIÓN</p>
+                        <p class="text-[11px] text-gray-800">Plaza Sor Cristina de la Cruz Arteaga s/n, 18001 Granada</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://maps.app.goo.gl/RPNfgKQ651RZon2m7" target="_blank" class="inline-flex items-center gap-2 bg-gray-800 text-white px-3 py-2 rounded text-[11px] hover:bg-gray-700 transition">
+                            <i class="fa-solid fa-map-location-dot"></i> Ver en mapa
+                        </a>
+                        <a href="tel:958206140" class="inline-flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded text-[11px] hover:bg-green-700 transition">
+                            <i class="fa-solid fa-phone"></i> 958 206 140
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Parking Palacio de Congresos -->
+                <div class="bg-white p-4 rounded border">
+                    <h4 class="font-bold text-sm text-gray-800 mb-2">Parking Palacio de Congresos</h4>
+                    <p class="text-[11px] text-gray-600 mb-3">En el centro de Granada para 329 vehículos. Ubicado frente al Palacio de Congresos.</p>
+                    
+                    <div class="grid grid-cols-2 gap-2 mb-3">
+                        <div class="bg-orange-50 p-2 rounded text-center">
+                            <p class="text-[10px] text-gray-500 mb-1">1 HORA</p>
+                            <p class="text-sm font-bold text-orange-700">1,30 €</p>
+                        </div>
+                        <div class="bg-orange-50 p-2 rounded text-center">
+                            <p class="text-[10px] text-gray-500 mb-1">1 DÍA</p>
+                            <p class="text-sm font-bold text-orange-700">18,42 €</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mb-3">
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-clock mr-1"></i>HORARIO</p>
+                            <p class="text-[11px] text-gray-800 font-bold">Abierto 24 horas</p>
+                        </div>
+                        <div class="bg-gray-50 p-2 rounded">
+                            <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-car mr-1"></i>AFORO</p>
+                            <p class="text-[11px] text-gray-800 font-bold">329 plazas</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-50 p-2 rounded mb-3">
+                        <p class="text-[10px] text-gray-500 mb-1"><i class="fa-solid fa-location-dot mr-1"></i>DIRECCIÓN</p>
+                        <p class="text-[11px] text-gray-800">Paseo del Violón s/n, 18006 Granada</p>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                        <a href="https://maps.app.goo.gl/bC24oURsem1gyXbh7" target="_blank" class="inline-flex items-center gap-2 bg-gray-800 text-white px-3 py-2 rounded text-[11px] hover:bg-gray-700 transition">
+                            <i class="fa-solid fa-map-location-dot"></i> Ver en mapa
+                        </a>
+                        <a href="tel:958817167" class="inline-flex items-center gap-2 bg-green-600 text-white px-3 py-2 rounded text-[11px] hover:bg-green-700 transition">
+                            <i class="fa-solid fa-phone"></i> 958 817 167
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabla comparativa -->
+            <div class="card bg-gray-50">
+                <h4 class="font-bold text-sm mb-3 text-center">📊 Comparativa de Parkings de Pago</h4>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-[11px]">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="p-2 text-left">Parking</th>
+                                <th class="p-2 text-center">1 Hora</th>
+                                <th class="p-2 text-center">1 Día</th>
+                                <th class="p-2 text-center">Plazas</th>
+                                <th class="p-2 text-center">Horario</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr class="border-b bg-green-50">
+                                <td class="p-2 font-bold text-green-800">La Hípica</td>
+                                <td class="p-2 text-center font-bold text-green-800">0,90 €</td>
+                                <td class="p-2 text-center font-bold text-green-800">13,00 €</td>
+                                <td class="p-2 text-center">951</td>
+                                <td class="p-2 text-center">24h</td>
+                            </tr>
+                            <tr class="border-b bg-yellow-50">
+                                <td class="p-2 font-bold text-yellow-800">Méndez Núñez</td>
+                                <td class="p-2 text-center font-bold text-yellow-800">1,50 €</td>
+                                <td class="p-2 text-center">15,00 €</td>
+                                <td class="p-2 text-center">805</td>
+                                <td class="p-2 text-center">24h</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-2 font-bold">Palacio de Congresos</td>
+                                <td class="p-2 text-center">1,30 €</td>
+                                <td class="p-2 text-center">18,42 €</td>
+                                <td class="p-2 text-center">329</td>
+                                <td class="p-2 text-center">24h</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-2 font-bold">Severo Ochoa</td>
+                                <td class="p-2 text-center">1,70 €</td>
+                                <td class="p-2 text-center">18,00 €</td>
+                                <td class="p-2 text-center">504</td>
+                                <td class="p-2 text-center">24h</td>
+                            </tr>
+                            <tr class="border-b">
+                                <td class="p-2 font-bold">APK2 Arabial</td>
+                                <td class="p-2 text-center">2,00 €</td>
+                                <td class="p-2 text-center">13,00 €</td>
+                                <td class="p-2 text-center">451</td>
+                                <td class="p-2 text-center">24h</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
         
         <!-- COLABORADORES (LISTA COMPLETA DE 21) -->
         <section id="colaboradores" class="content-section hidden">
